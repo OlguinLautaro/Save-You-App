@@ -7,9 +7,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
+
 const Tab = createBottomTabNavigator();//variable para los iconos
 
-function TabGroup() { 
+function Home() { 
     return (
     <Tab.Navigator
         screenOptions={({route}) => ({
@@ -38,11 +39,7 @@ function TabGroup() {
     export default function Navigation() {
     
         return (
-            <NavigationContainer>
+                <Home/>
     
-                <TabGroup />
-    
-            </NavigationContainer>
-        
         )
     }
