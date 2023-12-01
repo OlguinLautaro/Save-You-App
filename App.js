@@ -7,17 +7,29 @@ import 'react-native-gesture-handler'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "@firebase/auth";
 import { initializeApp } from '@firebase/app';
 import { firebaseConfig } from './firebase-config';
-/*import Navigation from './navigation';
-import Contacto from './pantallas/contactos';*/
+import Home from './navigation';
+import Contacto from './pantallas/contactos';
 import Registro from './pantallas/registro';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
+
+
+const stack = createStackNavigator();
 export default function App() {
   return (
-    <Login />
-
+   
+    <NavigationContainer>
+            <stack.Navigator initialRouteName="Login">
+                <stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
+                <stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
+            </stack.Navigator>
+        </NavigationContainer>
+   
   )
 
 
 }
+
+
 

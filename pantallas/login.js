@@ -6,16 +6,20 @@ import Registro from "./registro";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from '@firebase/auth';
 import { initializeApp } from '@firebase/app';
 import { firebaseConfig } from './../firebase-config';
+import { useNavigation} from '@react-navigation/native';
+
+
 
 
 
 
 export default function Login() {
-  const [email, setEmail] = React.useState('')
+ const [email, setEmail] = React.useState('')
   const [password, setPassword] = React.useState('')
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
+  const navigation = useNavigation();
 
   
 
@@ -24,7 +28,8 @@ export default function Login() {
     .then((userCredential) => {
       console.log('Sesion iniciada')
       const user = userCredential.user;
-      //console.log(user)
+      navigation.navigate('Home');
+      console.log(user)
     })
     .catch(error => {
       console.log(error)
@@ -68,7 +73,7 @@ export default function Login() {
       <Text style={styles.registrate}>¿No tienes una cuenta? <Button  title="Regístrate" /></Text>
     </View>
   );
-}
+  }
   
   const styles = StyleSheet.create({
     container: {
@@ -120,6 +125,4 @@ export default function Login() {
     // Por ejemplo, puedes navegar a la pantalla de inicio después de iniciar sesión.
 
   }
-  
-  
   
