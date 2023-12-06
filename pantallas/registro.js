@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Image } from 'react-native';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "@firebase/auth";
 import { initializeApp } from '@firebase/app';
 import { firebaseConfig } from './../firebase-config';
@@ -34,6 +34,10 @@ export default function Registro(){
 
   return (
     <View style={styles.container}>
+      <Image
+        style={styles.image}
+        source={require("./../assets/logo.png")}
+      />
       <Text style={styles.titulo}>Registro</Text>
 
       
@@ -73,24 +77,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
   },
+  image: {
+    width: 200,
+    height: 200,
+    },
   titulo: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
   },
   input: {
-    width: '100%',
-    height: 40,
-    borderColor: 'gray',
     borderWidth: 1,
-    marginBottom: 15,
-    paddingLeft: 10,
+    borderColor: 'black',
+    paddingStart: 30,
+    padding: 10,
+    width: '80%',
+    marginTop: 20,
+    borderRadius: 30,
+    backgroundColor: '#fff'
   },
+ 
   boton: {
     backgroundColor: 'blue',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    borderRadius: 7,
+    marginTop: 20
   },
   textoBoton: {
     color: 'white',
