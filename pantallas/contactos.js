@@ -57,9 +57,10 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
     },
     titulo: {
+      marginTop: 150,
       fontSize: 24,
       fontWeight: 'bold',
-      marginBottom: 20,
+      marginBottom: 5,
       textAlign: 'center',
     },
     formulario: {
@@ -67,18 +68,23 @@ const styles = StyleSheet.create({
       marginBottom: 20,
     },
     input: {
-      width: '100%',
-      height: 40,
-      borderColor: 'gray',
       borderWidth: 1,
-      marginBottom: 15,
-      paddingLeft: 10,
+      borderColor: 'black',
+      paddingStart: 30,
+      padding: 10,
+      width: '80%',
+      marginTop: 20,
+      borderRadius: 30,
+      backgroundColor: '#fff',
+      marginLeft: 40
     },
     boton: {
       backgroundColor: 'blue',
-      paddingVertical: 10,
-      paddingHorizontal: 20,
-      borderRadius: 5,
+      paddingVertical: 12,
+      paddingHorizontal: 15,
+      borderRadius: 7,
+      marginTop: 20,
+      
     },
     textoBoton: {
       color: 'white',
