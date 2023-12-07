@@ -18,19 +18,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 const stack = createStackNavigator();
 export default function App() {
   return (
-   
+    
     <NavigationContainer>
             <stack.Navigator initialRouteName="Login">
-                <stack.Screen name="Registro" component={Registro} options={{headerShown: false}}/>
+                <stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
                 <stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
-                <stack.Screen name="Login" component={Login} options={{headerShown: false}} />
+                <stack.Screen name="Registro" component={Registro} options={{headerShown: false}} />
+                <stack.Screen name="Contacto" component={Contacto} options={{headerShown: false}} />
             </stack.Navigator>
         </NavigationContainer>
-   
-  )
-
-
+)
 }
-
 
 
