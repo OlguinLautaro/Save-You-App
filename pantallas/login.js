@@ -28,7 +28,7 @@ export default function Login() {
     .then((userCredential) => {
       console.log('Sesion iniciada')
       const user = userCredential.user;
-      navigation.navigate('Home');
+      navigation.navigate("Home");
       console.log(user)
     })
     .catch(error => {
