@@ -43,6 +43,9 @@ export default function Login() {
       }
     })
   }
+  const redireccionRegistro = () => {
+    navigation.navigate("Registro");
+  }
 
   return (
     <View style={styles.container}>
@@ -72,7 +75,7 @@ export default function Login() {
 
       <Text style={styles.registrate}>¿No tienes una cuenta? </Text>
 
-      <TouchableOpacity style={styles.boton2} onPress={handleSignIn}>
+      <TouchableOpacity style={styles.boton2} onPress={redireccionRegistro}>
         <Text style={styles.textoBoton}>Registrate</Text>
       </TouchableOpacity>
       
