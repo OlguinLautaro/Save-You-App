@@ -28,9 +28,9 @@ function Home() {
         },
         })}
         >
-        <Tab.Screen name="inicio" component={inicio} /> 
+        <Tab.Screen name="inicio" component={inicio}  /> 
         <Tab.Screen name="boton" component={boton} />
-        <Tab.Screen name="mapa" component={mapa} />
+        <Tab.Screen name="mapa" component={mapa} options={{headerShown: false}} />
         
         </Tab.Navigator> //Iconos de inicio, boton y mapa
     )
