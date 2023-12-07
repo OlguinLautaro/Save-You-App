@@ -4,6 +4,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { initializeApp } from '@firebase/app';
 import { firebaseConfig } from './../firebase-config';
 import Login from './login';
+import { useNavigation} from '@react-navigation/native';
 
 export default function Registro(){
   const [nombre, setNombre] = React.useState('');
@@ -12,12 +13,14 @@ export default function Registro(){
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
+  const navigation = useNavigation();
 
   const heandleCreateAccount = () => {
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) =>{
       console.log('Cuenta creada!')
       const user = userCredential.user;
+      navigation.navigate("Login");
       //console,log(user)
     })
     .catch(error =>{
