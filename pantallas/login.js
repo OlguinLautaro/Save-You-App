@@ -67,10 +67,15 @@ export default function Login() {
       <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
 
       <TouchableOpacity style={styles.boton} onPress={handleSignIn}>
-        <Text style={styles.textoBoton}>Iniciar seción</Text>
+        <Text style={styles.textoBoton}>Iniciar sesión</Text>
       </TouchableOpacity>
 
-      <Text style={styles.registrate}>¿No tienes una cuenta? <Button  title="Regístrate" /></Text>
+      <Text style={styles.registrate}>¿No tienes una cuenta? </Text>
+
+      <TouchableOpacity style={styles.boton2} onPress={handleSignIn}>
+        <Text style={styles.textoBoton}>Registrate</Text>
+      </TouchableOpacity>
+      
     </View>
   );
   }
@@ -110,12 +115,33 @@ export default function Login() {
       marginTop: 10,
       },
       registrate: {
-      fontSize: 20,
-      marginTop: 19,
+      fontSize: 25,
+      marginTop: 50,
+      marginBottom: 10
       },
       button2: {
         width: 100,
         height: 20,
+      },
+      boton: {
+        backgroundColor: 'blue',
+        paddingVertical: 12,
+        paddingHorizontal: 15,
+        borderRadius: 7,
+        marginTop: 20
+      },
+      boton2: {
+        backgroundColor: 'blue',
+        paddingVertical: 12,
+        paddingHorizontal:40,
+        marginHorizontal: 20,
+        borderRadius: 7,
+        
+      },
+      textoBoton: {
+        color: 'white',
+        fontSize: 17,
+        fontWeight: 'bold'
       }
   });
   
