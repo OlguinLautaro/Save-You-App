@@ -20,9 +20,10 @@ export default function App() {
   return (
    
     <NavigationContainer>
-            <stack.Navigator initialRouteName="Login">
-                <stack.Screen name="Login" component={Contacto} options={{headerShown: false}}/>
+            <stack.Navigator initialRouteName="Registro">
+                <stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
                 <stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
+                <stack.Screen name="Registro" component={Registro} options={{headerShown: false}} />
             </stack.Navigator>
         </NavigationContainer>
    
