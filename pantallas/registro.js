@@ -27,6 +27,14 @@ export default function Registro(){
       console.log(error)
       Alert.alert(error.message)
     })
+    if (nombre.trim() === '' || email.trim() === '' || password.trim() === ''){
+      setIsModalVisible(true);
+      Alert.alert('Datos no detectados', 'Por favor ingrese sus datos para poder crear su cuenta')
+    } else {
+      console.log('Nombre:', nombre);
+      console.log('Email:', email);
+      console.log('Contraseña', password);
+    }
   }
 
    /*const handleRegistro = () => {
