@@ -42,6 +42,12 @@ export default function Login() {
           break;
       }
     })
+    if (email.trim() === '' || password.trim() === ''){
+      Alert.alert('Datos no ingresado', 'Por favor llene los espacios para poder iniciar sesion de su cuenta')
+    } else {
+      console.log('Email:', email);
+      console.log('Contraseña', password);
+    }
   }
   const redireccionRegistro = () => {
     navigation.navigate("Registro");
