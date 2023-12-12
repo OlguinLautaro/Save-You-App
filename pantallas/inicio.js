@@ -4,13 +4,13 @@ import { useNavigation} from '@react-navigation/native';
 
 export default function Inicio() {
 const navigation = useNavigation();
-    const agregar = () => {
+    const Agregar = () => {
         navigation.navigate("Contacto")
     }
     return (
         <View style={styles.container}>
             
-            <TouchableOpacity style={styles.boton} onPress={agregar}>
+            <TouchableOpacity style={styles.boton} onPress={Agregar}>
                 <Text style={styles.textoBoton}>Agregar contacto</Text>
             </TouchableOpacity>
         </View>
