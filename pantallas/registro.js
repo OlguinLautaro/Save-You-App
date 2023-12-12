@@ -15,7 +15,7 @@ export default function Registro(){
   const auth = getAuth(app);
   const navigation = useNavigation();
 
-  const heandleCreateAccount = () => {
+  const HeandleCreateAccount = () => {
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) =>{
       console.log('Cuenta creada!')
@@ -74,7 +74,7 @@ export default function Registro(){
         value={password}
         onChangeText={(text) => setPassword(text)}
       />
-            <TouchableOpacity style={styles.boton} onPress={heandleCreateAccount}>
+            <TouchableOpacity style={styles.boton} onPress={HeandleCreateAccount}>
         <Text style={styles.textoBoton}>Registrarse</Text>
       </TouchableOpacity>
     </View>

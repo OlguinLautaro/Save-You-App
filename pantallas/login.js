@@ -23,7 +23,8 @@ export default function Login() {
 
   
 
-  const handleSignIn = () => {
+  const 
+  HandleSignIn = () => {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       console.log('Sesion iniciada')
@@ -49,7 +50,7 @@ export default function Login() {
       console.log('Contraseña', password);
     }
   }
-  const redireccionRegistro = () => {
+  const direccionRegistro = () => {
     navigation.navigate("Registro");
   }
 
@@ -75,13 +76,13 @@ export default function Login() {
 
       <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
 
-      <TouchableOpacity style={styles.boton} onPress={handleSignIn}>
+      <TouchableOpacity style={styles.boton} onPress={HandleSignIn}>
         <Text style={styles.textoBoton}>Iniciar sesión</Text>
       </TouchableOpacity>
 
       <Text style={styles.registrate}>¿No tienes una cuenta? </Text>
 
-      <TouchableOpacity style={styles.boton2} onPress={redireccionRegistro}>
+      <TouchableOpacity style={styles.boton2} onPress={direccionRegistro}>
         <Text style={styles.textoBoton}>Registrate</Text>
       </TouchableOpacity>
       
