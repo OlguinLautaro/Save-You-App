@@ -22,7 +22,7 @@ function Home() {
             } else if (route.name === "mapa") {
             iconName = focused ? "map" : "map-outline";//icono para el mapa
             } else if (route.name === "boton") {
-            iconName = focused ? "circle" : "circle-o";//icono para el boton
+            iconName = focused ? "map" : "map-outline";//icono para el boton
             }
             return <Ionicons name={iconName} color={color} size={size} />
         },
